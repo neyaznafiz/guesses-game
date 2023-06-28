@@ -10,6 +10,7 @@ pub fn guess() {
 
   println!("Please input your guess");
 
+  // loop for check number
   loop {
     let mut guesses = String::new();
     io::stdin()
@@ -26,6 +27,7 @@ pub fn guess() {
 
     // println!("You guessed: {guesses}");
 
+    // check number value
     match guesses.cmp(&secret_number) {
         Ordering::Less => println!("Your number {guesses} is too small than secret number {secret_number}"),
         Ordering::Greater => println!("Your number {guesses} is too big than secret number {secret_number}"),
